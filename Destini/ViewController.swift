@@ -54,17 +54,35 @@ class ViewController: UIViewController {
     // User presses one of the buttons
     @IBAction func buttonPressed(_ sender: UIButton) {
         
-        if sender.tag == 1 && storyIndex {
+        if sender.tag == 1 && (storyIndex == 1 || storyIndex == 2) {
             storyTextView.text = story3
             topButton.setTitle(answer3a, for: .normal )
             bottomButton.setTitle(answer1b, for: .normal)
+            storyIndex = 3
             
         } else if sender.tag == 2 && storyIndex == 1 {
             storyTextView.text = story2
             topButton.setTitle(answer2a, for: .normal )
             bottomButton.setTitle(answer2b, for: .normal)
+            storyIndex = 2
+        } else if sender.tag == 1 && storyIndex == 3 {
+            storyTextView.text = story6
+            topButton.isHidden = true
+            bottomButton.isHidden = true
+        } else if sender.tag == 2 && storyIndex == 3 {
+            storyTextView.text = story5
+            topButton.isHidden = true
+            bottomButton.isHidden = true
+        } else if sender.tag == 2 && storyIndex == 2 {
+            storyTextView.text = story4
+            topButton.isHidden = true
+            bottomButton.isHidden = true
+            storyIndex = 4
         }
 
+        if storyIndex == 4 || storyIndex == 5 || storyIndex == 6 {
+            
+        }
         // TODO Step 4: Write an IF-Statement to update the views
                 
         // TODO Step 6: Modify the IF-Statement to complete the story
@@ -73,7 +91,9 @@ class ViewController: UIViewController {
     }
     
 
-
+    @IBAction func restartPressed(_ sender: UIButton) {
+    }
+    
 
 }
 
