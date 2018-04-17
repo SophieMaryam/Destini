@@ -67,7 +67,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="restartPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="wPg-S2-Rfl"/>
+                                    <action selector="restartButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="p9q-RH-ix4"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -90,6 +90,7 @@
                     </view>
                     <connections>
                         <outlet property="bottomButton" destination="YYD-qC-cgr" id="oTr-dl-hKK"/>
+                        <outlet property="restartButton" destination="ije-z7-JaO" id="leo-ZX-Ikz"/>
                         <outlet property="storyTextView" destination="amk-E0-c5D" id="TU8-d8-Hye"/>
                         <outlet property="topButton" destination="u0E-Z6-us4" id="Dfm-eR-Gan"/>
                     </connections>
